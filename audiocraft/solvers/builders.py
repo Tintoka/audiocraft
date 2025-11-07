@@ -315,6 +315,8 @@ def get_audio_datasets(cfg: omegaconf.DictConfig,
     assert cfg.dataset is not None, "Could not find dataset definition in config"
 
     dataset_cfg = dict_from_config(cfg.dataset)
+    print(dataset_cfg)
+    print(cfg)
     splits_cfg: dict = {}
     splits_cfg['train'] = dataset_cfg.pop('train')
     splits_cfg['valid'] = dataset_cfg.pop('valid')
